@@ -3,8 +3,12 @@ var customerName = "Alliance  ";
 // <h1 id="tm-header" class="tm-brand text-uppercase"></h1> <!--todo: Add Customer Name-->
 function addCustomerName() {
 
-    let title = document.getElementById('title')
+    let title = document.getElementById('tm-header')
     title.textContent = customerName;
+    // let brand = document.getElementById('tm-header')
+    // title.textContent = customerName;
+    let intro = document.getElementById('introheader')
+    intro.textContent = customerName;
     
     // <h1 id="tm-header" class="tm-brand text-uppercase"></h1> <!--todo: Add Customer Name-->
 
@@ -14,8 +18,22 @@ function addCustomerName() {
 
 function toggleColors() {
     // <!-- todo: Change all classes named 'tm-white-rect' to 'tm-blue-rect' -->
+    let el = document.querySelectorAll('.tm-white-rect')
+    for (let i = 0; i < el.length; i++) {
+        
+        el[i].classList.add('tm-blue-rect')
+        el[i].classList.remove('tm-white-rect')
+      }
 
 };
+
+// let el = document.querySelectorAll('.tm-white-rect');
+
+//     for (i = 0; i < el.length; ++i) {
+//         el[i].classList.add('tm-blue-rect');
+//         el[i].classList.remove('tm-white-rect');
+//     }
+// };
 
 function hideElement() {
     //<ul class="nav flex-row tm-social-links">  <!--todo: Hide social links-->
